@@ -3,332 +3,240 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Gentle Shepherd Co. — Jesus Keepsake Collection coming soon." />
-  <title>The Gentle Shepherd Co. | Coming Soon</title>
+  <meta name="description" content="The Gentle Shepherd Co. creates premium faith-inspired keepsakes designed to bring comfort, warmth, and meaning into everyday life." />
+  <meta name="theme-color" content="#173f34" />
+  <title>The Gentle Shepherd Co. | Keep Jesus Close</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#f7f0e4;
-      --bg2:#efe2ce;
-      --green:#163f33;
-      --green2:#20493d;
-      --gold:#c59a4a;
-      --gold2:#b88935;
-      --text:#3b463f;
-      --soft:#7c7f78;
-      --line:rgba(197,154,74,.75);
-      --white:#fffdfa;
-      --shadow:0 24px 60px rgba(22,63,51,.08);
-    }
-
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      min-height:100vh;
-      font-family:"Inter",sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,.65), transparent 32%),
-        radial-gradient(circle at 85% 80%, rgba(255,255,255,.55), transparent 28%),
-        linear-gradient(160deg, var(--bg) 0%, #f6eedf 40%, var(--bg2) 100%);
-      overflow-x:hidden;
-    }
-
-    .page{
-      min-height:100vh;
-      padding:28px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      position:relative;
-      isolation:isolate;
-    }
-
-    .page::before,
-    .page::after{
-      content:"";
-      position:absolute;
-      inset:auto;
-      width:360px;
-      height:360px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(255,255,255,.35), transparent 62%);
-      z-index:-2;
-      filter:blur(12px);
-    }
-    .page::before{top:30px;left:20px}
-    .page::after{right:20px;bottom:30px}
-
-    .shell{
-      position:relative;
-      width:min(1120px, 100%);
-      background:rgba(255,253,249,.38);
-      backdrop-filter: blur(6px);
-      border:1.25px solid rgba(197,154,74,.45);
-      box-shadow:var(--shadow);
-      border-radius:22px;
-      padding:52px 40px 44px;
-      overflow:hidden;
-    }
-
-    .shell::before{
-      content:"";
-      position:absolute;
-      inset:16px;
-      border:1px solid rgba(197,154,74,.55);
-      border-radius:14px;
-      pointer-events:none;
-    }
-
-    .leaf{
-      position:absolute;
-      color:rgba(22,63,51,.18);
-      font-family:"Cormorant Garamond",serif;
-      font-size:140px;
-      line-height:1;
-      user-select:none;
-      pointer-events:none;
-    }
-    .leaf.left{left:-14px;bottom:74px;transform:rotate(-8deg)}
-    .leaf.right{right:-20px;top:86px;transform:scaleX(-1) rotate(-14deg)}
-    .leaf.bottom{right:62px;bottom:-6px;font-size:110px;opacity:.14}
-
-    .inner{
-      max-width:760px;
-      margin:0 auto;
-      text-align:center;
-      position:relative;
-      z-index:1;
-    }
-
-    .logo{
-      width:min(480px, 72vw);
-      display:block;
-      margin:0 auto 22px;
-      filter:drop-shadow(0 10px 20px rgba(0,0,0,.04));
-    }
-
-    .micro{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:14px;
-      color:var(--gold2);
-      font-size:12px;
-      font-weight:600;
-      letter-spacing:.34em;
-      text-transform:uppercase;
-      margin:6px 0 20px;
-    }
-    .micro::before,.micro::after{
-      content:"";
-      width:82px;
-      max-width:12vw;
-      height:1px;
-      background:var(--line);
-    }
-
-    .ornament{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:16px;
-      margin:16px auto 24px;
-      color:var(--gold2);
-      opacity:.95;
-    }
-    .ornament::before,.ornament::after{
-      content:"";
-      width:150px;
-      max-width:22vw;
-      height:1px;
-      background:var(--line);
-    }
-    .ornament span{
-      font-size:22px;
-      line-height:1;
-    }
-
-    h1{
-      margin:0;
-      font-family:"Cormorant Garamond",serif;
-      color:var(--green);
-      font-weight:600;
-      text-transform:uppercase;
-      letter-spacing:.05em;
-      font-size:clamp(46px, 7vw, 84px);
-      line-height:.92;
-    }
-
-    .coming{
-      margin:10px 0 10px;
-      font-family:"Cormorant Garamond",serif;
-      color:var(--green);
-      font-style:italic;
-      font-weight:500;
-      font-size:clamp(36px, 4vw, 56px);
-      line-height:1.1;
-    }
-
-    .tagline{
-      margin:10px 0 8px;
-      font-family:"Cormorant Garamond",serif;
-      color:var(--green2);
-      font-size:clamp(22px, 2.5vw, 34px);
-      font-weight:600;
-      line-height:1.25;
-    }
-
-    .sub{
-      margin:0 auto 28px;
-      max-width:640px;
-      color:var(--soft);
-      font-size:17px;
-      line-height:1.7;
-    }
-
-    .notify-wrap{
-      margin:26px auto 24px;
-      max-width:720px;
-      display:grid;
-      grid-template-columns:1fr 210px;
-      gap:14px;
-    }
-
-    .notify-wrap input{
-      width:100%;
-      height:64px;
-      border-radius:14px;
-      border:1px solid rgba(197,154,74,.55);
-      background:rgba(255,252,245,.82);
-      padding:0 22px;
-      font-size:17px;
-      color:var(--green);
-      outline:none;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.4);
-    }
-
-    .notify-wrap input::placeholder{
-      color:#9e9a8f;
-    }
-
-    .notify-wrap button{
-      height:64px;
-      border:none;
-      border-radius:14px;
-      background:linear-gradient(180deg, var(--green2), var(--green));
-      color:#f5e7c2;
-      font-size:16px;
-      font-weight:600;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      cursor:pointer;
-      box-shadow:0 10px 22px rgba(22,63,51,.14);
-      transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
-    }
-    .notify-wrap button:hover{
-      transform:translateY(-1px);
-      box-shadow:0 14px 28px rgba(22,63,51,.18);
-    }
-
-    .message{
-      min-height:24px;
-      margin-top:4px;
-      color:var(--green2);
-      font-size:14px;
-    }
-
-    .footer-orn{
-      margin:28px auto 12px;
-      color:var(--gold2);
-      font-size:22px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:14px;
-    }
-    .footer-orn::before,.footer-orn::after{
-      content:"";
-      width:92px;
-      max-width:14vw;
-      height:1px;
-      background:var(--line);
-    }
-
-    .footer{
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      flex-wrap:wrap;
-      margin-top:8px;
-      color:#8d8b84;
-      font-size:13px;
-      letter-spacing:.04em;
-    }
-
-    @media (max-width: 760px){
-      .page{padding:14px}
-      .shell{padding:34px 20px 28px}
-      .notify-wrap{
-        grid-template-columns:1fr;
-        gap:12px;
-      }
-      .notify-wrap button, .notify-wrap input{height:58px}
-      .leaf{display:none}
-      .micro{letter-spacing:.24em}
-      .tagline{font-size:26px}
-      .sub{font-size:15px}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="page">
-    <section class="shell">
-      <div class="leaf left">❦</div>
-      <div class="leaf right">❦</div>
-      <div class="leaf bottom">❦</div>
+  <header class="site-header" id="top">
+    <div class="nav-wrap container">
+      <a class="brand" href="#home" aria-label="The Gentle Shepherd Co. home">
+        <img src="tgsc-logo.png" alt="The Gentle Shepherd Co." />
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#story">Our Story</a>
+        <a href="#giving">Giving Back</a>
+        <a href="#faq">FAQ</a>
+        <a href="#shipping">Shipping</a>
+        <a href="#care">Care Guide</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="inner">
-        <img src="tgsc-logo.png" alt="The Gentle Shepherd Co. logo" class="logo" />
-
-        <div class="micro">Keep Jesus Close</div>
-        <div class="ornament"><span>✧</span></div>
-
-        <h1>Jesus Keepsake<br>Collection</h1>
-        <div class="ornament"><span>✧</span></div>
-
-        <div class="coming">Coming Soon</div>
-
-        <p class="tagline">Faith-filled keepsakes for meaningful moments.</p>
-        <p class="sub">Thoughtfully made plush keepsakes are on the way.</p>
-
-        <form class="notify-wrap" id="notifyForm">
-          <input type="email" id="email" placeholder="Enter your email for launch updates" required />
-          <button type="submit">Notify Me</button>
-        </form>
-        <div id="message" class="message" aria-live="polite"></div>
-
-        <div class="footer-orn">❦</div>
-        <div class="footer">
-          <span>The Gentle Shepherd Co.</span>
-          <span>•</span>
-          <span>thegentleshepherdco.com</span>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Keep Jesus Close</p>
+        <img class="hero-logo" src="tgsc-logo.png" alt="The Gentle Shepherd Co. logo" />
+        <div class="ornament"><span>✦</span></div>
+        <h1>Faith-filled keepsakes<br>for meaningful moments.</h1>
+        <p class="hero-copy">Soft, comforting, and thoughtfully made pieces designed to bring a gentle reminder of faith, love, and warmth into everyday life.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#shop">Explore the Collection</a>
+          <a class="btn btn-ghost" href="#story">Read Our Story</a>
         </div>
+        <p class="launch-note">Jesus Keepsake Collection · Launching Soon</p>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="container narrow center">
+        <p class="eyebrow">Jesus Keepsake Collection</p>
+        <h2>Made to be cherished and kept close.</h2>
+        <p class="lead">Our first premium keepsake is coming soon. Thoughtfully designed for gifting, display, comfort, and the everyday moments that matter most.</p>
+        <div class="product-card">
+          <div class="product-mark">✦</div>
+          <div>
+            <p class="product-kicker">Coming Soon</p>
+            <h3>The Jesus Keepsake Plush</h3>
+            <p>Premium soft fabric · PP cotton filling · embroidered details · meaningful keepsake presentation</p>
+            <a class="text-link" href="mailto:hello@thegentleshepherdco.com?subject=Jesus%20Keepsake%20Launch%20Updates">Ask about launch updates →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story">
+      <div class="container story-grid">
+        <div class="story-card decorative-card">
+          <div class="story-emblem">❦</div>
+          <p>Comfort</p><span>·</span><p>Faith</p><span>·</span><p>Warmth</p>
+        </div>
+        <div>
+          <p class="eyebrow">Our Story</p>
+          <h2>A simple idea, made with heart.</h2>
+          <p>The Gentle Shepherd Co. began with a simple idea: to create a plush keepsake that feels comforting, meaningful, and beautifully made.</p>
+          <p>We wanted to design something soft and huggable, but also heartfelt — a gentle reminder of faith, love, and comfort that can be treasured by children, families, and adults.</p>
+          <p>Every piece is thoughtfully designed, from the softness of the fabric to the little details that make it feel special. More than just a plush, our keepsakes are made to bring warmth to the heart, whether displayed at home, given as a gift, or carried along wherever life takes you.</p>
+          <p>At The Gentle Shepherd Co., we believe meaningful pieces should feel personal, comforting, and timeless.</p>
+          <p class="signature-line">A little reminder to keep Jesus close.</p>
+        </div>
+      </div>
+      <div class="container quote-wrap">
+        <blockquote>“From our heart to yours, The Gentle Shepherd Co. was created to bring comfort, faith, and warmth into everyday moments.”</blockquote>
+        <p>— Founder, The Gentle Shepherd Co.</p>
+      </div>
+    </section>
+
+    <section class="section giving-section" id="giving">
+      <div class="container narrow center">
+        <p class="eyebrow">Giving Back</p>
+        <h2>A keepsake can carry a little more kindness.</h2>
+        <p class="lead">At The Gentle Shepherd Co., we believe every keepsake can carry a little more love, comfort, and kindness.</p>
+        <div class="giving-box">
+          <span class="giving-icon">♡</span>
+          <p>Through TGSC, we hope to share comfort, faith, and kindness. A portion of our purchases helps support charitable outreach and community giving.</p>
+        </div>
+        <p class="small-note">Our outreach initiatives may vary over time as we identify meaningful ways to support communities in need.</p>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro">
+          <p class="eyebrow">Frequently Asked Questions</p>
+          <h2>Everything you may want to know.</h2>
+          <p>Can’t find the answer you need? Email us and we’ll be happy to help.</p>
+          <a class="btn btn-ghost" href="mailto:hello@thegentleshepherdco.com">Email Us</a>
+        </div>
+        <div class="accordion" data-accordion>
+          <details open><summary>What is The Gentle Shepherd Co.?</summary><p>The Gentle Shepherd Co. creates premium faith-inspired keepsakes designed to bring comfort, warmth, and meaning into everyday life. Our pieces are thoughtfully made to be soft, huggable, giftable, and easy to treasure.</p></details>
+          <details><summary>What makes your plush special?</summary><p>Our plush is designed to feel comforting, cute, and meaningful without feeling overwhelming. We focus on soft materials, gentle details, and a warm design that can be loved by children, families, and adults.</p></details>
+          <details><summary>Is the plush safe for children?</summary><p>We aim to use soft, child-friendly materials, embroidered details, and thoughtful construction wherever possible. For young children, adult supervision is still recommended, especially when a design includes removable accessories or small decorative parts.</p></details>
+          <details><summary>What materials are used?</summary><p>Our plush is made with soft fabric and filled with PP cotton. Some designs may include embroidered details, removable accessories, fabric tags, or other small design elements depending on the product style.</p></details>
+          <details><summary>How do I care for my plush?</summary><p>We recommend gentle spot cleaning with a damp cloth and mild soap. Avoid machine washing, soaking, bleaching, or tumble drying to help preserve the shape, embroidery, and softness.</p></details>
+          <details><summary>Do you accept bulk orders?</summary><p>Yes. We welcome bulk-order inquiries for gifts, events, churches, schools, and special occasions. Please contact us for availability, pricing, and lead time.</p></details>
+          <details><summary>Where do you ship from?</summary><p>We ship from Fort BGC, Taguig, Philippines.</p></details>
+          <details><summary>Do you ship nationwide?</summary><p>Yes. We ship within the Philippines. Shipping options and rates may depend on your location and the courier available at the time of checkout.</p></details>
+          <details><summary>Do you offer international shipping?</summary><p>International shipping may be available upon request. Please contact us before placing an order so we can check available shipping options and estimated costs.</p></details>
+          <details><summary>How long does delivery take?</summary><p>Delivery time depends on your location and the courier. Once your order has been shipped, we will send tracking details when available.</p></details>
+          <details><summary>What payment methods do you accept?</summary><p>Available payment methods may include bank transfer, GCash, Maya, card payments, or other checkout options shown on the website at the time of purchase.</p></details>
+          <details><summary>Can I change my order after placing it?</summary><p>Please contact us as soon as possible. If your order has not yet been packed or shipped, we’ll do our best to help. Once an order has shipped, changes may no longer be possible.</p></details>
+          <details><summary>Do you accept returns or exchanges?</summary><p>Returns or exchanges are accepted for confirmed defects or quality concerns upon arrival. Please contact us within 24–48 hours of receiving your order and include your order number plus clear photos or videos for review.</p></details>
+          <details><summary>Will the accessories be exactly the same?</summary><p>Some accessories or small details may vary slightly depending on availability and production. We always aim to keep the overall look, quality, and design consistent.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section policy-split" id="shipping">
+      <div class="container two-col">
+        <article class="policy-card">
+          <p class="eyebrow">Shipping & Delivery</p>
+          <h2>Philippines</h2>
+          <p>We ship nationwide from Fort BGC, Taguig, Philippines. Shipping rates and delivery times vary based on destination, parcel size, and courier availability.</p>
+          <p>Tracking details will be shared when available after your order has shipped.</p>
+          <p>For order concerns, please include your order number so we can assist you faster.</p>
+        </article>
+        <article class="policy-card">
+          <p class="eyebrow">International Shipping</p>
+          <h2>By request</h2>
+          <p>We accept international orders when shipping is available to your country.</p>
+          <p>Shipping fees are not fixed at checkout because rates depend on the destination, item weight, and package size. Please contact us before placing an international order so we can check the shipping fee for you.</p>
+          <p>International customers are responsible for any customs fees, duties, taxes, or import charges required by their country.</p>
+          <a class="text-link" href="mailto:hello@thegentleshepherdco.com?subject=International%20Shipping%20Inquiry">Request an international shipping quote →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section care-section" id="care">
+      <div class="container care-grid">
+        <div>
+          <p class="eyebrow">Care Guide</p>
+          <h2>Keep your keepsake soft and beautiful.</h2>
+          <p class="lead">Gentle care helps preserve the plush’s shape, fabric, embroidery, and special details.</p>
+        </div>
+        <ol class="care-list">
+          <li><span>01</span><div><strong>Spot clean only</strong><p>Use a damp cloth and a small amount of mild soap.</p></div></li>
+          <li><span>02</span><div><strong>Do not soak</strong><p>Avoid machine washing or fully submerging the plush in water.</p></div></li>
+          <li><span>03</span><div><strong>Air dry naturally</strong><p>Do not bleach, tumble dry, iron, or expose to high heat.</p></div></li>
+          <li><span>04</span><div><strong>Handle accessories gently</strong><p>Remove or adjust accessories carefully to help preserve their shape and finish.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">Contact Us</p>
+          <h2>We’d love to hear from you.</h2>
+          <p>For questions about your order, product availability, bulk orders, or custom requests, please send us a message and we’ll get back to you as soon as we can.</p>
+          <p class="small-note">For order concerns, kindly include your order number so we can assist you faster.</p>
+        </div>
+        <div class="contact-details">
+          <div><span>Email</span><a href="mailto:team@thegentleshepherdco.com">team@thegentleshepherdco.com</a></div>
+          <div><span>Customer Care</span><p>Bulacan, Philippines</p></div>
+          <div><span>Response Time</span><p>1–2 business days</p></div>
+          <div><span>Instagram</span><a href="https://instagram.com/thegentleshepherdco" rel="noopener" target="_blank">@thegentleshepherdco</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section legal-section" id="privacy">
+      <div class="container legal-grid">
+        <article>
+          <p class="eyebrow">Privacy Policy</p>
+          <h2>Your privacy matters.</h2>
+          <p>At The Gentle Shepherd Co., we respect your privacy and are committed to protecting your personal information.</p>
+          <p>When you place an order or contact us, we may collect details such as your name, email address, phone number, shipping address, order details, and payment confirmation.</p>
+          <p>We use this information only to process your order, arrange delivery, respond to inquiries, provide customer support, and improve our services.</p>
+          <p>We do not sell your personal information. We may share only the information needed to complete your order, such as delivery details with a courier or transaction-related information with a payment provider.</p>
+          <p>We take reasonable steps to keep your information safe and private. Questions may be sent to <a href="mailto:hello@thegentleshepherdco.com">hello@thegentleshepherdco.com</a>.</p>
+        </article>
+        <article id="terms">
+          <p class="eyebrow">Terms & Conditions</p>
+          <h2>Simple, fair shopping terms.</h2>
+          <p>By using this website or placing an order with The Gentle Shepherd Co., you agree to the product, payment, shipping, and customer-care terms shown on this site.</p>
+          <p>Product colors, accessories, and small design details may vary slightly because of photography, display settings, production, or material availability. We aim to keep the overall design and quality consistent.</p>
+          <p>Orders are subject to availability and successful payment confirmation. Shipping timelines are estimates and may be affected by courier operations, weather, holidays, customs, or events outside our reasonable control.</p>
+          <p>For confirmed defects or quality concerns, please contact us within 24–48 hours of delivery with your order number and supporting photos or videos. Each request will be reviewed before a return, replacement, or exchange is approved.</p>
+          <p>All brand names, logos, product designs, photography, written content, and other original materials on this website belong to The Gentle Shepherd Co. unless otherwise stated and may not be reproduced without permission.</p>
+          <p>These terms may be updated from time to time. Continued use of the website after an update means you accept the revised terms.</p>
+        </article>
       </div>
     </section>
   </main>
 
-  <script>
-    const form = document.getElementById('notifyForm');
-    const message = document.getElementById('message');
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="tgsc-logo.png" alt="The Gentle Shepherd Co." />
+        <p>A little reminder to keep Jesus close.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="#shop">Shop</a>
+          <a href="#story">Our Story</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact Us</a>
+          <a href="#shipping">Shipping</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms & Conditions</a>
+        </div>
+      </div>
+      <div>
+        <h3>Stay in touch</h3>
+        <p><a href="mailto:hello@thegentleshepherdco.com">hello@thegentleshepherdco.com</a></p>
+        <p>Fort BGC, Taguig, Philippines</p>
+        <p><a href="https://instagram.com/thegentleshepherdco" rel="noopener" target="_blank">@thegentleshepherdco</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> The Gentle Shepherd Co.</span>
+      <span>Faith · Comfort · Warmth</span>
+    </div>
+  </footer>
 
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      message.textContent = "Thank you — we’ll let you know when we launch.";
-      form.reset();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
